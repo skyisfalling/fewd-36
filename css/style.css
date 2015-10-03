@@ -6,10 +6,13 @@
 
 html{
 	color: #555;
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
 	font-size: 20px;
+	font-family: "Raleway";
 	text-rendering: optimizeLegibility;
+}
+
+h2{
+	font-weight: 200;
 }
 
 .main-nav{
@@ -20,6 +23,13 @@ html{
 
 .main-nav a:link,
 .main-nav a:visited{
+	font-weight: 200;
 	color: #fff;
 	text-decoration: none;
+}
+
+li a:link,
+li a:visited {
+	text-decoration: none;
+
 }
