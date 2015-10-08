@@ -1,0 +1,64 @@
+/* Reset */
+/* ------------------------ */
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
+body{
+	margin: 50px;
+	width: 600px;
+}
+
+header {
+	border-bottom: 1px solid grey;
+	display: flex;
+	flex: 1;
+	padding: 5px;
+}
+
+.menu {
+	display: flex;
+}
+
+.menu ul {
+	list-style: none;
+	display: flex;
+}
+.menu li {
+	padding-left: 3px;
+	padding-right: 3px;
+	font: "Helvetica";
+
+}
+
+.menu h3 {
+	flex: 1;
+}
+
+header img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	
+}
+
+h2 {
+	border-top: 1px solid grey;
+	font: bold 28px "Times New Roman";
+	margin-top: 10px 0px 3px 0px;
+	
+}
+
+p {
+	font: 18px "Times New Roman";
+	margin-bottom: 20px;
+}
+
+h5 {
+	font-style:10px "Helvetica";
+	text-align: right;
+	font-variant: small-caps;
+
+}

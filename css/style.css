@@ -13,6 +13,8 @@ html{
 
 h2{
 	font-weight: 200;
+	text-align: center;
+	margin: 20px;
 }
 
 .main-nav{
@@ -32,4 +34,8 @@ li a:link,
 li a:visited {
 	text-decoration: none;
 
+}
+
+ul {
+	text-align: center;
 }

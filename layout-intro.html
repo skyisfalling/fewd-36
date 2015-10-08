@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>layout intro</title>
+<style>
+
+* {
+	margin:0;
+	padding: 0;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+	td,
+	div,
+	span,
+	article,
+	p,
+	h6 {
+		background: limegreen;
+		padding: 3px;
+	}
+
+	section {
+		display: flex;
+		align-items: flex-end;
+		background: skyblue;
+	}
+
+	aside {
+		width: 300px;
+		background: peachpuff;
+	}
+
+	article {
+		flex: 1;
+	}
+
+	p {
+		flex: 2;
+	}
+
+	.sidebar {
+		background: red;
+		width: 200px;
+	}
+
+	.main {
+		flex: 1;
+	}
+
+	.google-cfo {
+		position: relative;
+		margin: 10px auto;
+		height: 270px;
+		width: 480px;
+	}
+
+	.google-cfo img{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.google-cfo h5{
+		position: absolute;
+		top: 50px;
+		left: 30px;
+		color: white;
+	}
+
+
+</style>
+</head>
+<body>
+
+<h1>CSS Layout</h1>
+
+<h2>Absolute Position</h2>
+
+<div class="google-cfo">
+
+<img  width="480" height="270" src="google-hiring-women.jpg">
+
+<h5>Google Hiring women is good for business</h5>
+
+<h2>Table layout</h2>
+
+<table>
+	<tr>
+		<td>Column 1</td>
+		<td>Column 2</td>
+		<td>Column 3</td>
+	</tr>
+</table>
+
+<h2>Flexbox</h2>
+
+<h3>Natural widths</h3>
+
+<section>
+	<div>Column 1</div>
+	<div>Column 2</div>
+	<div>Column 3</div>
+</section>
+
+<h3>Sidebar</h3>
+
+<section>
+	<aside>Column 1</aside>
+	<span>Column 2</span>
+	<span>Column 3</span>
+</section>
+
+<h3>Sidebar with class</h3>
+
+<section>
+	<span class="sidebar">Sidebar</span>
+	<span class="main">Main</span>
+	<span>Column 3</span>
+</section>
+
+<h3>Three even column></h3>
+<section>
+	<article>Column 1</article>
+	<article>Column 2</article>
+	<article>Column 3</article>
+</section>
+
+<h3>One large column, two small</h3>
+<section>
+	<h6>Column 1</h6>
+	<p>Column 2</p>
+	<p>Column 3</p>
+</section>
+
+
+<h3>Single Column</h3>
+<section>
+		<aside>Column 1</aside>
+		<article>Column 2</article>
+</section>
+
+<h3>Holy grail!!!</h3>
+<section>
+	<article>Cornhole mlkshk gentrify meh lumbersexual letterpress. Synth try-hard asymmetrical, four loko migas organic DIY ennui. Wayfarers tofu four dollar toast, deep v flexitarian crucifix trust fund aesthetic pork belly chambray banjo next level asymmetrical keffiyeh.</article>
+	<article>+1 Williamsburg beard master cleanse Blue Bottle messenger bag Odd Future Etsy literally.</article>
+	<article>tacos</article>
+</section>
+
+<h3>Flex row</h3>
+<section class="row">
+
+</body>
+</html>
