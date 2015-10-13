@@ -18,6 +18,11 @@ h3 {
 	color: #CA5C27;
 }
 
+h2 {
+	font-size: 20px;
+	padding-top: 10px;
+}
+
 ul,
 ol {
     list-style-position: inside;
@@ -41,7 +46,6 @@ section {
 .right-column {
 	background-color: #F2DB8B;
 	padding: 40px;
-	flex: 1;
 
 }
 
@@ -54,14 +58,20 @@ section {
 .time {
 	display: flex;
 	justify-content: space-between;
-
+	text-align: center;
+	padding: 20px 30px 20px 30px;
 }
 
 .time li {
 	flex: 1;
 	list-style: none;
+	
+
 }
 
 .bold{
 	color: #CA5C27;
+	font-weight: bold;
+	font-size: 20px;
+
 }
