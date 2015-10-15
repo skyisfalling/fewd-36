@@ -75,3 +75,20 @@ section {
 	font-size: 20px;
 
 }
+
+.image {
+	position: relative;
+}
+
+.image li {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	color: white;
+	list-style: none;
+	padding: 10px;
+	border: 2px solid white;
+	border-radius: 30px;
+	text-align: center;
+	width: 45px;
+}
