@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	margin-top: 20px;
+}
+
+li {
+	width: 50px;
+	height: 50px;
+	border: 4px solid black;
+	border-radius: 50%;
+	margin: 0px 10px;
+	text-indent: -9000px;
+
+}
+
+.olive {
+	background: olive;
+}
+
+.salmon {
+	background: salmon;
+}
+
+.burlywood {
+	background: burlywood;
+}
+
+.thistle {
+	background: thistle;
+}
+
+h1, p {
+	font-family: "helvetica";
+	margin: 10px;
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 5🔹FEWD 36</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../css/fewd-36.css" />
+	<link rel="shortcut icon" href="../images/fewd-36-favicon.png" />
+<style>
+h2 {
+	background: #C9C9C9;
+}
+button {
+	margin: 10px 10px 10px 0;
+}
+</style>
+</head>
+<body>
+
+<header>
+	<h1><a href="../index.html">FEWD 36</a> - JavaScript Cheatsheet</h1>
+</header>
+
+<section>
+
+
+<div class="elements">
+<script>console.log("--------- Elements ---------");</script>
+
+<h2>Element - text and value</h2>
+
+<p>To get or set an element's text content, use the 
+<code>.textContent</code> property</p>
+
+<h4>Syntax:</h4>
+<code>Element.textContent</code>
+
+<h4>Examples:</h4>
+<p>Get an element's text content. And save it to a variable.</p>
+<code>
+<pre>
+var brainy = document.querySelector(".brainy");
+var text = brainy.textContent;
+</pre>
+</code>
+
+<p>Change an element's text content.</p>
+<code>
+<pre>
+var clumsy = document.querySelector(".clumsy");
+clumsy.textContent = "Whoops!";
+</pre>
+</code>
+
+<h4>Try it out:</h4>
+<p class="sample">This is some sample text.</p>
+<button class="read-text">Log text content</button>
+<button class="change-text">Change text content</button>
+
+<script>
+// Structure - get the elements from the DOM, save to variables
+var sample           = document.querySelector(".sample");
+var readTextButton   = document.querySelector(".read-text");
+var changeTextButton = document.querySelector(".change-text");
+
+// Events - which elements are listening for events, 
+//          and the function to call when that event happens
+readTextButton.addEventListener("click", readTextContent);
+changeTextButton.addEventListener("click", changeTextContent);
+
+// Event handler functions
+function readTextContent() {
+	// read the element's text content
+	var text = sample.textContent;
+	console.log(text);
+}
+
+function changeTextContent() {
+	// change the element's text content
+	sample.textContent = "I changed my mind, this is the real text.";
+}
+
+
+</script>
+
+
+<!-- 
+1
+Span Element
+- textContent
+
+Input Element
+- value -->
+
+<!-- 
+1.2
+Image
+- src
+ -->
+
+</div>
+<div class="strings">
+<script>console.log("--------- Strings ----------");</script>
+
+<h2>Strings</h2>
+<!-- 
+length
+convert string to number parseInt()
+take a phone number, split it into three parts string.split()
+
+Number
+convert to string. toString() -->
+
+</div>
+<div class="events">
+<script>console.log("--------- Events -----------");</script>
+
+<h2>Events</h2>
+
+<ul>
+    <li class="red">Red</li>
+    <li class="green">Green</li>
+    <li class="blue">Blue</li>
+</ul>
+
+<script>
+// Structure
+var red = document.querySelector(".red");
+var green = document.querySelector(".green");
+var blue = document.querySelector(".blue");
+
+// Events
+red.addEventListener("click", sayTheColor);
+green.addEventListener("click", sayTheColor);
+blue.addEventListener("click", sayTheColor);
+
+// Event handler function
+function sayTheColor(event) {
+    console.log(event.target);
+    console.log(event.target.textContent);
+}
+
+</script>
+
+</div>
+<div class="class-list">
+<script>console.log("--------- ClassList API ----");</script>
+
+<h2>ClassList API</h2>
+
+<p class="olive">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<style>
+.olive {
+    color: olive;
+    font-size: 50px;
+}
+.salmon {
+    color: salmon;
+}
+.purple {
+    color: purple;
+    font-family: arial;
+    background-color: pink;
+}
+</style>
+<script>
+
+// Structure
+var test = document.querySelector(".olive");
+console.log(test.className);
+
+// Event
+test.addEventListener("click", changeTextColor);
+
+// Event handler function
+function changeTextColor(event) {
+    test.classList.remove("olive");
+    test.classList.add("salmon");
+    test.classList.toggle("purple");
+    console.log(test.className);
+}
+
+</script>
+
+</div>
+<div class="window">
+<script>console.log("--------- Window -----------");</script>
+
+<h2>Window Object</h2>
+<!-- 
+window.location.href
+Location
+History
+go back one page window.history.back() -->
+
+</div>
+<div class="document">
+<script>console.log("--------- Document ---------");</script>
+
+<h2>Document</h2>
+
+<!-- 
+createElement()
+
+
+Element
+appendChild()
+
+
+ -->
+
+</div>
+
+</section>
+
+
+</body>
+</html>
