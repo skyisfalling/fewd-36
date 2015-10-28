@@ -7,7 +7,7 @@ function convert(degree) {
         document.getElementById("c").value = Math.round(C);
     }
 
- function changeColor
+
 
 /*var num1 = document.querySelector(".celsius")
 var num2 = document.querySelector(".fahrenheit")
