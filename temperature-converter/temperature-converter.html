@@ -10,17 +10,40 @@
 </head>
 <body>
 
-<h1>Temperature Converter</h1>
+<h1>
+	<ul class="temp-title">
+		<li>T</li>
+		<li>E</li>
+		<li>M</li>
+		<li>P</li>
+	</ul>
+</h1>
+
 
 <section>
 <p class = "left-column">
-<input size="5" style="font-size:18pt;height:30px" id="c" onkeyup="convert('C')"> <span class = "cel">C&deg</span>
+<input class="cels" size="5" style="font-size:18pt;height:30px" id="c" placeholder="&#176C"> <span class = "cel">&degC</span>
 </p>
-<p class = "arrow">&laquo&raquo</p>
+
+<div class="button">
+<button class="conC">&#8614</button>
+<button class="conF">&#8612</button>
+</div>
+
 <p class = "right-column">
-<input size="5" style="font-size:18pt;height:30px"id="f" onkeyup="convert('F')"> <span class = "fah">F&deg</span>
+
+<input class="fahr" size="5" style="font-size:18pt;height:30px"id="f" placeholder="&#176F"> <span class = "fah">&degF</span>
 </p>
 </section>
+
+<h1>
+	<ul class="conv-title">
+		<li>C</li>
+		<li>O</li>
+		<li>N</li>
+		<li>V</li>
+	</ul>
+</h1>
 
 <script src="js/temperature-converter.js"></script>
 
