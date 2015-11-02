@@ -11,31 +11,51 @@ html{
 	text-rendering: optimizeLegibility;
 }
 
-h2{
+h1 {
+
+}
+
+h2 {
 	font-weight: 200;
 	text-align: center;
 	margin: 20px;
 }
 
-.main-nav{
+.main-nav {
+	font-size: 48px;
 	text-align: center;
-	padding: 10px 0px 10px 0px;
+	padding: 20px 0px 20px 0px;
 	background-color: #34495e;
 }
 
 .main-nav a:link,
-.main-nav a:visited{
+.main-nav a:visited {
 	font-weight: 200;
-	color: #fff;
+	color: #16a085;
 	text-decoration: none;
 }
 
+.main-nav a:hover {
+	color: white;
+}
+
+
 li a:link,
 li a:visited {
+	color: black;
+	font-weight: 200;
 	text-decoration: none;
 
+}
+
+li a:hover {
+	color: #16a085;
 }
 
 ul {
 	text-align: center;
+}
+
+li {
+	padding: 10px;
 }
