@@ -51,9 +51,11 @@ button {
 
 .items {
 	margin-left: 20px;
+	margin-bottom: 10px;
 	font-size: 18px;
 	display: flex;
 	flex-direction: column;
+
 }
 
 p {
@@ -65,7 +67,12 @@ p {
 	font-style: italic;
 }
 
-input:checked + label {
+input + label {
+	margin:0px 6px;
+
+}
+
+input:checked ~ label {
 	text-decoration: line-through;
 
 }

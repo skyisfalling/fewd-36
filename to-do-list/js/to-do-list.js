@@ -17,15 +17,26 @@ document.addEventListener("DOMContentLoaded", function(){
 		//console.log("input: " + input.value);
 		var task = input.value;
 		var taskDate = date.value;
-		taskDate.className = taskDate.className + "gray";//this did not work, need to figure out how to add class
-		//create an li 
+		//taskDate.className = taskDate.className + "gray";//this did not work, need to figure out how to add class
+		//create an li element to hold other items we create including checkbox(input) and labels (to display the task and date)
 		var addLi = document.createElement("li");
+		var checkbox = document.createElement("input");
+		var labelTask = document.createElement("label");
+		var labelDate = document.createElement("label");
 		
 		//decorate and making sure the correct property are made
 		//console.log(date);
-		addLi.innerHTML = '<input type = \"checkbox\"/>' + " " + '<p>'+task+'</p>' + " " + "(" + '<p>'+taskDate+'</p>' +")";
+		//*doing this with concatenation: addLi.innerHTML = '<input type = \"checkbox\"/>' + " " + '<p>'+task+'</p>' + " " + "(" + '<p>'+taskDate+'</p>' +")";
+		checkbox.setAttribute("type", "checkbox");
+		labelTask.textContent = task;
+		labelDate.textContent = "(" + taskDate + ")";
+		labelDate.classList.add("gray");
+
 		//addLi.className = "taskListItem";
 		itemsList.appendChild(addLi);
+		addLi.appendChild(checkbox);
+		addLi.appendChild(labelTask);
+		addLi.appendChild(labelDate);
 
 
 	}
