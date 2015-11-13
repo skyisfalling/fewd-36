@@ -4,18 +4,44 @@
 	<title>create element</title>
 </head>
 <body>
+
+<button>Color me</button>
+
 	<ul>
 		<li>blue</li>
 		<li>green</li>
 		<li>red</li>
 	</ul>
 
+
 <script>
 
+//Structure
 var list = document.querySelector("ul");
+var button = document.querySelector("button");
 
+button.addEventListener("click", colorMe);
+
+//Event handler function
+
+//THis function is for adding a new li
+//when button is clicked
+//We also setup a CSS class so that
+function colorMe() {
+
+	var color = prompt("what color would you like to master?");
+
+//Step 1 - create the elements
 var newItem = document.createElement("LI");
-newItem.textContent = "yellow"
+
+//Step 2 - decorate the elements
+newItem.textContent = color;
+newItem.className = color;
+
+//Step 3 - insert the elements
+list.appendChild(newItem);
+
+}
 
 </script>
 </body>
