@@ -93,7 +93,7 @@ a:hover {
 .thanks p,
 .donors p,
 .now p {
-	width: 500px;
+	width: 650px;
 	display: block;
 	margin: 40px auto;
 	font-family: 'Sacramento';
@@ -118,7 +118,7 @@ a:hover {
 
 .thank-orna {
 	display: block;
-	margin: auto;
+	margin: 40px auto;
 }
 
 .gallery-ny,
@@ -167,6 +167,7 @@ a:hover {
     width: 55px;
     height: 30px;
     opacity: 1;
+    margin-left: -3px
 }
 
 .slick-next::before {
@@ -177,5 +178,52 @@ a:hover {
 .slick-prev::before {
     background: url("../img/arrow-previous.png") no-repeat 0px 0px;
     background-size: cover;
+}
+
+#page-wrap {
+	margin: 20px auto;
+	width: 660px;
+	background: white;
+	padding: 20px 50px 20px 50px;
+	min-height: 500px;
+	height: auto !important;
+	height: 500px;
+}
+
+#contact-area {
+	display: block;
+	margin: 25px auto;
+	width: 600px;
+}
+
+#contact-area input, #contact-area textarea {
+	padding: 5px;
+	width: 471px;
+	font-family: Helvetica, sans-serif;
+	font-size: 14px;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+#contact-area textarea {
+	height: 90px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+	border: 2px solid #900;
+}
+
+#contact-area input.submit-button {
+	width: 100px;
+	float: right;
+}
+
+label {
+	float: left;
+	text-align: right;
+	margin-right: 15px;
+	width: 100px;
+	padding-top: 5px;
+	font-size: 14px;
 }
 
