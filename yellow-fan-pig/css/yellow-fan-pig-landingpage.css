@@ -41,8 +41,17 @@ h1 {
 #nav li {
 	margin: 20px 20px;
 	font-size: 14px;
-	color: #BC14B4;
 	}
+
+.resting {
+	color: #BC14B4 ;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #0F0944 ;
+	text-decoration: none;
+}
  
 #colorlogo {
 	display: block;

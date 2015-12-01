@@ -55,29 +55,33 @@ function changeImage(item) {
 window.setInterval(changeImage,1200);
 
 
-
+//Gallery
 
 $(document).ready(function(){
   $('.gallery-ny').slick({
     dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  centerMode: true,
-  variableWidth: true
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    centerMode: true,
+    variableWidth: true
+  });
+
+  $('.gallery-hk').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    centerMode: true,
+    variableWidth: true
   });
 });
 
+//Sticky Nav
 
-
-$(document).ready(function(){
-  $('.gallery-hk').slick({
-    dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  centerMode: true,
-  variableWidth: true
+$(function () {
+   $('.header').stickyNavbar({
+    animateCSS: false  
   });
 });
 
