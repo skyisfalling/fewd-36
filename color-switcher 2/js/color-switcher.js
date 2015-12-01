@@ -8,6 +8,11 @@
 // var color5 = document.querySelector(".thistle");
 var list   = document.querySelector("ul");
 
+//Setup
+//--------------------------------------
+var theme = {
+	'color': 'white'
+};
 // Events
 // -------------------------------------
 //same idea as above in the structure section
@@ -16,30 +21,48 @@ var list   = document.querySelector("ul");
 // color3.addEventListener("click", changeColor);
 // color4.addEventListener("click", changeColor);
 // color5.addEventListener("click", changeColor);
-list.addEventListener("click", changeColor);
+window.addEventListener("load", pageLoad); //when you want something to happen on pageload, use this 
+list.addEventListener("click", handleClick);
 // ...to do in next class!
 
 
 // Event handler functions
 // -------------------------------------
-
-function changeColor(event) {
-	console.log("changeColor");
-	console.log(event.target.tagName);
-
-	if (event.target.tagName == "UL") {
+function handleClick(event) {
+	//Return early unless the swatch was clicked
+	if (event.target.tagName === "UL") {
 		return;
 	}
-	var swatch = (event.target);
-	var color = swatch.className;
-	var color = swatch.getAttribute("class");
 
+	var swatchElement = (event.target);
+	var swatchColor = swatchElement.getAttribute("class");
+	
+	//1. Update data model
+	theme.color = swatchColor;
+	//2. Call function to update page
+	changeColor(theme);
+	//3. Save the date model to local storage
+	localStorage.setItem('theme', JSON.stringify(theme));
+}
+
+function pageLoad(event) {
+	//get the theme object out of localStorage
+	if (localStorage.getItem('theme')  == null) {
+		changeColor(theme);
+	} else {
+		theme = JSON.parse(localStorage.getItem('theme'));
+		changeColor(theme);
+	
+	}
+}
+
+//Update page functions
+function changeColor(theme) {
 	var body = document.querySelector("body");
-	body.setAttribute("class", color);
-
+	body.className = theme.color;
 
 	var name = document.querySelector("span");
-	name.textContent = color;
+	name.textContent = theme.color;
 }
 
 
@@ -47,19 +70,19 @@ function changeColor(event) {
 
 
 
-var theme = {
-	color:"thistle"
-}
+// var theme = {
+// 	color:"thistle"
+// }
 
-var themeString = JSON.stringify(theme);
-var theme = JSON.parse(localStorage.getItem("theme"))
+// var themeString = JSON.stringify(theme);
+// var theme = JSON.parse(localStorage.getItem("theme"))
 
 
-var task = {
-	name: "exercise",
-	date: undefined,
-	completed: false
-}
+// var task = {
+// 	name: "exercise",
+// 	date: undefined,
+// 	completed: false
+// }
 
 
 

@@ -24,6 +24,7 @@ div {
 .boxes {
 	display: flex;
 	justify-content: center;
+
 }
 
 .text-box {
@@ -51,7 +52,7 @@ button {
 
 .items {
 	margin-left: 20px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	font-size: 18px;
 	display: flex;
 	flex-direction: column;
@@ -62,7 +63,7 @@ p {
 	display: inline;
 }
 
-.gray {
+.gray{
 	color: gray;
 	font-style: italic;
 }

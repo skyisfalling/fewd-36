@@ -2,19 +2,171 @@
 html {
 	font-family: "Raleway";
 	text-rendering: optimizeLegibility;
+	height: 4000px;
 }
-.landing img {
+
+.landing {
+	height: 961px;
+}
+
+.logo {
+	position: absolute;
 	display: block;
-	margin: 0 auto;
+	margin: auto;
+	left: 900px;
+	bottom: 400px;
+}
+
+h1 {
+	position: absolute;
+	color: white;
+	font-family: 'Sacramento';
+	font-size:40px;
+	left: 850px;
+	bottom: 300px;
+}
+
+.gif img {
+	display: block;
+	margin: auto;
+	width: 100%;
+}
+
+#nav ul {
+	display: flex;
+	background-color:rgba(255,255,255,0.8);
+
+}
+
+#nav li {
+	margin: 20px 20px;
+	font-size: 14px;
+	color: #BC14B4;
+	}
+ 
+#colorlogo {
+	display: block;
+	margin: 30px auto;
+}
+
+.thanks {
 	position: relative;
 }
 
-.landing button{
-	background: transparent;
-    border: none;
-    font-size: 28px;
-    font-family: "Raleway";
-    position: absolute;
-
-
+#thankmsg {
+	position: absolute;
+	left: 350px;
+	bottom: 50px;
+	/*background-color: rgba(255, 255, 255, 0.4);*/
 }
+
+.donors {
+	position: relative;
+}
+
+#donorsmsg {
+	position: absolute;
+	left: 350px;
+	bottom: 50px;
+}
+
+.now {
+	position: relative;
+}
+
+#nowmsg {
+	position: absolute;
+	left: 350px;
+	bottom: 50px;
+}
+
+
+.thanks p,
+.donors p,
+.now p {
+	width: 500px;
+	display: block;
+	margin: 40px auto;
+	font-family: 'Sacramento';
+	font-size: 28px;
+	text-align: center;
+}
+
+#thanksbg,
+#donorsbg,
+#nowbg {
+	margin: 30px 0px;
+	opacity: 0.7;
+	
+}
+
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+  	position: fixed;
+    width: 100%;
+}
+
+.thank-orna {
+	display: block;
+	margin: auto;
+}
+
+.gallery-ny,
+.gallery-hk {
+	width: 600px;
+	margin: 30px auto;
+}
+
+.gallery-ny img,
+.gallery-hk img {
+	margin: 0px 30px;
+}
+
+.celebration-gallery {
+	display: flex;
+}
+
+.rotator {
+	width: 900px;
+	display: block;
+	margin: 30px auto;
+}
+
+.active {
+    color: #fff !important;
+    text-decoration: underline !important;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-slider {
+    margin-bottom: 60px;
+}
+
+.slick-prev {
+    left: -55px;
+}
+
+.slick-next::before,
+.slick-prev::before {
+	content: "";
+    display: block;
+    width: 55px;
+    height: 30px;
+    opacity: 1;
+}
+
+.slick-next::before {
+    background: url("../img/arrow-next.png") no-repeat 0px 0px;
+    background-size: cover;
+}
+
+.slick-prev::before {
+    background: url("../img/arrow-previous.png") no-repeat 0px 0px;
+    background-size: cover;
+}
+

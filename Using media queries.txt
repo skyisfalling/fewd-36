@@ -1,0 +1,49 @@
+Using media queries
+
+1. Within an existing css file
+===============================
+
+cash-register.css
+------------------
+.menu {
+	display: flex;
+}
+footer li {
+	width: 300px;
+}
+
+@menu all and (max-width: 500px) {
+	.menu {
+		flexdirection: column;
+	}
+	footer li {
+		width: 140px;
+	}
+}
+
+2. Media attribute on a link element
+====================================
+
+Mutually exclusive styles for mobile, tablet, desktop without any overlap. no default:
+<link rel="stylesheet" href="css/todo-mobile.css" media="(max-width: 500px)">
+<link rel="stylesheet" href="css/todo-tablet.css" media="(min-width: 501px) and (max-width: 1024px)">
+<link rel="stylesheet" href="css/todo-desktop.css" media="(min-width: 1025px)">
+
+
+
+One default/base set of styles with mobile & tablet overrides:
+<link rel="stylesheet" href="css/todo.css">
+<link rel="stylesheet" href="css/todo-mobile.css" media="(max-width: 500px)">
+<link rel="stylesheet" href="css/todo-tablet.css" media="(min-width: 501px) and (max-width: 1024px)">
+
+
+
+override example:
+-----------------
+p {
+	margin-top: 10px;
+}
+
+footer p {
+	margin-top: 30px;
+}

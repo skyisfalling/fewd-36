@@ -10,6 +10,9 @@ var total   = document.querySelector(".total");
 // ------------------------------------------------
 var totalValue = 0;
 
+var receipt = {
+	"items": []
+}
 
 // Events
 // ------------------------------------------------
