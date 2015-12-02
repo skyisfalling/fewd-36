@@ -236,8 +236,14 @@ a:hover {
 
 .comment-collection h2 {
 	text-align: center;
-	font-size: 48px;
+	font-size: 32px;
 	color: #BC14B4;
+}
+
+.comments li {
+	font-size: 14px;
+	color: #3D052E;
+	margin: 40px auto;
 }
 
 
