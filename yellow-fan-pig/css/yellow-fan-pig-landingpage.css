@@ -27,6 +27,12 @@ h1 {
 	bottom: 500px;
 }
 
+.header {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+}
+
 .gif img {
 	display: block;
 	margin: auto;
@@ -76,7 +82,7 @@ a:hover {
 
 #donorsmsg {
 	position: absolute;
-	left: 350px;
+	left: 270px;
 	bottom: 0px;
 }
 
@@ -86,20 +92,27 @@ a:hover {
 
 #nowmsg {
 	position: absolute;
-	left: 350px;
+	left: 270px;
 	bottom: 50px;
 }
 
 
 .thanks p,
 .donors p,
-.now p {
+.now p,
+.love p {
 	width: 650px;
 	display: block;
 	margin: 40px auto;
 	font-family: 'Sacramento';
 	font-size: 28px;
 	text-align: center;
+	color: #0F0944;
+}
+
+.donors p,
+.now p {
+	width: 900px;
 }
 
 #thanksbg,
@@ -107,7 +120,7 @@ a:hover {
 #nowbg,
 #lovebg {
 	margin: 30px 0px;
-	opacity: 0.7;
+	opacity: 0.5;
 	
 }
 
@@ -237,6 +250,7 @@ a:hover {
 .comment-collection h2 {
 	text-align: center;
 	font-size: 32px;
+	font-family: 'Sacramento';
 	color: #BC14B4;
 }
 
@@ -244,6 +258,15 @@ a:hover {
 	font-size: 14px;
 	color: #3D052E;
 	margin: 40px auto;
+}
+
+.arrow-down {
+	display: block;
+	margin: 0px auto;
+	margin-bottom: -130px;
+	-webkit-animation-duration: 1s;
+  	-webkit-animation-delay: 1s;
+  	-webkit-animation-iteration-count: infinite;
 }
 
 
