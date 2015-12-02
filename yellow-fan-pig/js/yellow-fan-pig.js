@@ -164,7 +164,7 @@ function createComment(comment) {
   var li = document.createElement("li");
 
   // update the value for the total
-  totalContent = comment['name'] + " " + comment['city'] + " " + comment['email'] + " " + comment['value']
+  totalContent = comment['name'] + " " + comment['city'] + " " + comment['email'] + " " + comment['message']
 
   // set the text content for both the new list item and the total
   li.textContent = totalContent 
