@@ -85,4 +85,98 @@ $(function () {
   });
 });
 
+// Structure
+// ------------------------------------------------
+var form    = document.querySelector("form");
+var input   = document.querySelector("input");
+var fullName    = document.querySelector(".fullname");
+var city    = document.querySelector(".city");
+var email   = document.querySelector(".email");
+var message = document.querySelector(".message");
+var comments    = document.querySelector(".comments")
+
+
+
+// Setup
+// ------------------------------------------------
+var loveBook = {
+  "comments": []
+};
+
+var firebaseReference = new Firebase("https://yellowfanpigtypage.firebaseio.com/");
+// Events
+// ------------------------------------------------
+window.addEventListener("load", setPageState);
+form.addEventListener("submit", enter);
+
+
+// Event handler functions
+// ------------------------------------------------
+function dataChanged(snapshot) {
+  if (snapshot.val() === null){
+    return;
+  }
+  
+  //reset the page
+  comments.innerHTML = "";
+  loveBook = snapshot.val();
+
+  loveBook.comments.forEach(createComment);
+}
+
+function setPageState(event) {
+
+  firebaseReference.on("value", dataChanged);
+  // error checking. return early if nothing saved yet
+}
+
+function enter(event) {
+  event.preventDefault();
+
+  // get the current entry value from form, convert to number with parseFloat
+  var comment = {
+    "name": fullName.value,
+    "city": city.value,
+    "email": email.value,
+    "message": message.value
+  };
+  
+  loveBook.comments.push(comment);
+  // update page
+  
+  // clean up!
+  form.reset();
+
+  // save to local storage
+
+  //CHANGE TO FIREBASE - set()
+  /*localStorage.setItem("comment", JSON.stringify(comment));*/
+
+  firebaseReference.set(loveBook);
+}
+
+
+// Update page functions
+// ------------------------------------------------
+function createComment(comment) {
+
+  // create and append the new list item
+  var li = document.createElement("li");
+
+  // update the value for the total
+  totalContent = comment['name'] + " " + comment['city'] + " " + comment['email'] + " " + comment['value']
+
+  // set the text content for both the new list item and the total
+  li.textContent = totalContent 
+  
+  comments.appendChild(li);
+
+}
+
+
+// Utility functions
+// ------------------------------------------------
+
+
+
 
