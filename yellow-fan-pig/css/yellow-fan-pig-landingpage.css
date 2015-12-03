@@ -258,6 +258,8 @@ a:hover {
 	font-size: 14px;
 	color: #3D052E;
 	margin: 40px auto;
+	text-align: center;
+    border-bottom: 1px dotted #BC14B4
 }
 
 .arrow-down {

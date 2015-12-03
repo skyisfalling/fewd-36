@@ -87,12 +87,12 @@ $(function () {
 
 // Structure
 // ------------------------------------------------
-var form    = document.querySelector("form");
-var input   = document.querySelector("input");
+var form        = document.querySelector("form");
+var input       = document.querySelector("input");
 var fullName    = document.querySelector(".fullname");
-var city    = document.querySelector(".city");
-var email   = document.querySelector(".email");
-var message = document.querySelector(".message");
+var city        = document.querySelector(".city");
+var email       = document.querySelector(".email");
+var message     = document.querySelector(".message");
 var comments    = document.querySelector(".comments")
 
 
@@ -113,6 +113,7 @@ form.addEventListener("submit", enter);
 // Event handler functions
 // ------------------------------------------------
 function dataChanged(snapshot) {
+  console.log('dataChanged');
   if (snapshot.val() === null){
     return;
   }
@@ -121,10 +122,29 @@ function dataChanged(snapshot) {
   comments.innerHTML = "";
   loveBook = snapshot.val();
 
+  // add resiliency
+  // - Check if the array of comments has somehow changed into an object.
+  // - Convert back to an array, and resave in firebase
+  if (!(loveBook.comments instanceof Array)) {
+    loveBook.comments = convertObjectToArray(loveBook.comments);
+    firebaseReference.set(loveBook);
+  }
+
   loveBook.comments.forEach(createComment);
 }
 
+
+function convertObjectToArray(obj) {
+    console.log("convertObjectToArray", obj);
+    var newArray = [];
+    for (var prop in obj) {
+      newArray.push(obj[prop]);
+    }
+    return newArray;
+}
+
 function setPageState(event) {
+  console.log('setPageState');
 
   firebaseReference.on("value", dataChanged);
   // error checking. return early if nothing saved yet
@@ -164,7 +184,7 @@ function createComment(comment) {
   var li = document.createElement("li");
 
   // update the value for the total
-  totalContent = "Name:" + comment['name'] + " " + "City:" + comment['city'] + " " + "Email:" + comment['email'] + " " + "Comment:" + comment['message']
+  totalContent = "Name:" + " " + comment['name'] + " " + "City:" + " " + comment['city'] + " " + "Email:" + " " + comment['email'] + " " + "Comment:" + " " + comment['message']
 
   // set the text content for both the new list item and the total
   li.textContent = totalContent 
